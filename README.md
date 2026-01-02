@@ -24,7 +24,7 @@ The project uses:
 
 * **JAX** for fast numerical computation
 * **Matplotlib** for analysis and probability plots
-* **Manim** for high-quality Bloch-sphere animations (for demonstrations)
+* **Manim** for high-quality Bloch-sphere animations (demonstrations)
 
 ---
 
@@ -42,6 +42,8 @@ This shows:
 
 * constant state probabilities
 * phase evolution without population transfer
+
+---
 
 ### Driven qubit
 
@@ -61,46 +63,55 @@ These plots are useful for **analysis, debugging, and verification of the physic
 ## Bloch-Sphere Demonstrations
 
 ### Driven qubit
+
 <p align="center">
   <img src="media/gifs/driven_bloch.gif" width="450">
 </p>
 
 ### Static qubit
+
 <p align="center">
   <img src="media/gifs/static_bloch.gif" width="450">
 </p>
 
+The Bloch-sphere animations provide an intuitive geometric picture of the qubit dynamics and are generated using **Manim** for presentation-quality visualization.
+
+---
+
 ## Results (Matplotlib)
 
-The Matplotlib simulations demonstrate:
+The Matplotlib simulations demonstrate the expected behavior of two-level quantum systems.
 
-* **Static qubit**
+### Static qubit
 
-  * Constant populations
-  * Bloch vector precessing around the z-axis
-  * Pure phase evolution
+* Constant populations
+* Bloch vector precessing around the z-axis
+* Pure phase evolution
+
 <p align="center">
   <img src="media/static_qubit.png" width="450">
 </p>
 
-* **Driven qubit**
+---
 
-  * Population transfer between |0⟩ and |1⟩
-  * Rabi oscillations
-  * Strong dependence on drive amplitude and frequency
+### Driven qubit
+
+* Population transfer between $|0\rangle$ and $|1\rangle$
+* Rabi oscillations
+* Strong dependence on drive amplitude and frequency
+
 <p align="center">
   <img src="media/driven_qubit.png" width="450">
 </p>
 
-These results are consistent with the expected physics of two-level quantum systems.
+These results are consistent with the standard physics of driven two-level systems.
 
 ---
 
 ## Notes
 
-* The numerical solver uses a Runge–Kutta (RK4) method.
-* The solver is written to be modular and extensible.
-* The project is designed for learning, exploration, and visualization of qubit dynamics rather than production-level quantum simulation.
+* The numerical solver uses a fourth-order Runge–Kutta (RK4) method.
+* The solver is modular and extensible for additional systems.
+* The project is designed for learning, exploration, and visualization rather than production-level quantum simulation.
 
 ---
-
