@@ -28,6 +28,55 @@ The project uses:
 
 ---
 
+## Mathematical Model
+
+The qubit is modeled as a two-level quantum system with state
+
+$$
+|\psi(t)\rangle =
+\begin{pmatrix}
+c_0(t) \\
+c_1(t)
+\end{pmatrix}
+$$
+
+whose time evolution is governed by the time-dependent Schrödinger equation (TDSE)
+
+$$
+i\hbar \frac{d}{dt} |\psi(t)\rangle = H(t)\,|\psi(t)\rangle.
+$$
+
+### Static Qubit
+
+For a static qubit, the Hamiltonian is time-independent:
+
+$$
+H = \frac{\omega}{2}\,\sigma_z
+$$
+
+This Hamiltonian produces pure phase evolution with no population transfer between the basis states.
+On the Bloch sphere, the state vector precesses around the $z$-axis.
+
+### Driven Qubit
+
+For a driven qubit, an external time-dependent control field is applied:
+
+$$
+H(t) =
+\frac{\omega}{2}\,\sigma_z
++
+\Omega \cos(\omega_d t)\,\sigma_x
+$$
+
+where:
+- $\omega$ is the qubit transition frequency
+- $\Omega$ is the drive amplitude
+- $\omega_d$ is the drive frequency
+
+This time-dependent Hamiltonian induces coherent transitions between the qubit states, leading to
+Rabi oscillations and nontrivial Bloch-sphere dynamics.
+
+
 ## Running the Matplotlib Simulations
 
 These scripts numerically solve the TDSE and produce **probability plots**.
