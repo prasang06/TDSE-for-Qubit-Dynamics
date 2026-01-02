@@ -1,0 +1,36 @@
+tdse_project/
+│
+├── quantum/                 # Physics definitions
+│   ├── __init__.py
+│   ├── constants.py
+│   ├── operators.py
+│   ├── states.py
+│   ├── systems.py
+│   ├── potentials.py        # (future: spatial TDSE)
+│   └── grids.py             # (future: spatial TDSE)
+│
+├── solvers/                 # Numerical time evolution
+│   ├── __init__.py
+│   ├── base.py
+│   ├── rk4.py
+│   └── tdse.py
+│
+├── simulation/              # Data containers
+│   ├── __init__.py
+│   └── result.py
+│
+├── visualization/           # Plotting & animation
+│   ├── __init__.py
+│   ├── animate_qubit.py
+│   └── animate_wavepacket.py   # future
+│
+├── experiments/             # scripts
+│   ├── static_qubit.py
+│   ├── driven_qubit.py
+│   └── wavepacket_1d.py     # future
+│
+├── utils/                   # Small helpers
+│   ├── __init__.py
+│   └── observables.py
+│
+└── README.md
