@@ -107,6 +107,19 @@ This shows:
 
 These plots are useful for **analysis, debugging, and verification of the physics**.
 
+### Multi Single-Driven qubit
+
+```bash
+python batch_qubit.py
+```
+The batch results are visualized using:
+
+* Time-domain expectation values $\langle \sigma_x \rangle$, $\langle \sigma_y \rangle$, and $\langle \sigma_z \rangle$
+* Bloch-sphere animations showing multiple sampple qubits evolving simultaneously
+
+These visualizations highlight how coherent single-qubit dynamics give rise to nontrivial ensemble behavior due to phase dispersion, even in the absence of decoherence.
+
+
 ---
 
 ## Bloch-Sphere Demonstrations
@@ -121,6 +134,12 @@ These plots are useful for **analysis, debugging, and verification of the physic
 
 <p align="center">
   <img src="media/gifs/static_bloch.gif" width="450">
+</p>
+
+### Batch Driven qubits
+
+<p align="center">
+  <img src="media/gifs/bloch_batch.gif" width="450">
 </p>
 
 The Bloch-sphere animations provide an intuitive geometric picture of the qubit dynamics and are generated using **Manim** for presentation-quality visualization.
@@ -154,6 +173,48 @@ The Matplotlib simulations demonstrate the expected behavior of two-level quantu
 </p>
 
 These results are consistent with the standard physics of driven two-level systems.
+
+### Multi Single-Driven qubit
+## Ensemble mean: mathematics
+
+<p align="center">
+  <img src="media/ensemble_mean_3d.png" width="450">
+</p>
+
+For a batch of $N$ qubits, the expectation value of a Pauli operator $\sigma_i$ for the $k$-th qubit is
+
+$$
+\langle \sigma_i \rangle_k(t) = \langle \psi_k(t) | \sigma_i | \psi_k(t) \rangle, \quad i \in \{x, y, z\}
+$$
+
+The **ensemble-averaged expectation value** is defined as
+
+$$
+\overline{\langle \sigma_i \rangle}(t) = \frac{1}{N} \sum_{k=1}^{N} \langle \sigma_i \rangle_k(t)
+$$
+
+The ensemble-averaged Bloch vector is therefore
+
+$$
+\overline{\mathbf{r}}(t) = \left( \overline{\langle \sigma_x \rangle}(t), \overline{\langle \sigma_y \rangle}(t), \overline{\langle \sigma_z \rangle}(t) \right)
+$$
+
+Importantly, the reduction in the magnitude of the ensemble-averaged Bloch vector arises from **phase cancellation between qubits**, not from decoherence. Each individual qubit remains in a pure state throughout the evolution.
+
+
+<p align="center">
+  <img src="media/sample_qubits_individual_dynamics.png" width="450">
+</p>
+
+This figure shows individual qubit expectation values for $\langle \sigma_x \rangle$, $\langle \sigma_y \rangle$, and $\langle \sigma_z \rangle$ for a small sample drawn from the ensemble. All qubits evolve coherently under the same driven Hamiltonian, exhibiting identical frequencies but different phases due to distinct initial states. The absence of damping confirms unitary, norm-preserving evolution, while phase dispersion across the ensemble explains the reduction observed in ensemble-averaged quantities.
+
+### Subtle but important insight
+
+From this plot alone, you can already infer:
+
+* the drive strength is moderate (not RWA-clean)
+* counter-rotating effects are present
+* dynamics are coherent but not trivial
 
 ---
 
