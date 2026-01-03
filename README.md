@@ -43,7 +43,7 @@ $$
 whose time evolution is governed by the time-dependent Schrödinger equation (TDSE)
 
 $$
-i\hbar \frac{d}{dt} |\psi(t)\rangle = H(t)\,|\psi(t)\rangle.
+i\hbar \frac{d}{dt} |\psi(t)\rangle = H(t)\|\psi(t)\rangle.
 $$
 
 ### Static Qubit
@@ -63,9 +63,9 @@ For a driven qubit, an external time-dependent control field is applied:
 
 $$
 H(t) =
-\frac{\omega}{2}\,\sigma_z
+\frac{\omega}{2}\\sigma_z
 +
-\Omega \cos(\omega_d t)\,\sigma_x
+\Omega \cos(\omega_d t)\\sigma_x
 $$
 
 where:
