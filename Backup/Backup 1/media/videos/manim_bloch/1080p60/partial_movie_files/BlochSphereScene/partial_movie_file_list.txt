@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/prasang/Documents/Projects/Quantum/TDSE RK4 JAX/media/videos/manim_bloch/1080p60/partial_movie_files/BlochSphereScene/1237963774_3919898646_1998357320.mp4'
+file 'file:/home/prasang/Documents/Projects/Quantum/TDSE RK4 JAX/media/videos/manim_bloch/1080p60/partial_movie_files/BlochSphereScene/771044652_2376654981_4014621969.mp4'
+file 'file:/home/prasang/Documents/Projects/Quantum/TDSE RK4 JAX/media/videos/manim_bloch/1080p60/partial_movie_files/BlochSphereScene/4197051686_1121617232_3596408462.mp4'
