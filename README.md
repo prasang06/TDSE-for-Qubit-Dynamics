@@ -51,7 +51,7 @@ $$
 For a static qubit, the Hamiltonian is time-independent:
 
 $$
-H = \frac{\omega}{2}\,\sigma_z
+H = \frac{\omega}{2}\\sigma_z
 $$
 
 This Hamiltonian produces pure phase evolution with no population transfer between the basis states.
